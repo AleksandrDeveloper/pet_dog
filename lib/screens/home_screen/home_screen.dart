@@ -16,7 +16,6 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Pet Dog'),
         backgroundColor: Theme.of(context).primaryColor.withOpacity(0.2),
-
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

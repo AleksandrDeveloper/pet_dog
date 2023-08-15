@@ -20,11 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Center(
-            child: Text('This new text'),
-          ),
-         const Center(
-            child: Text('HomeScreen new variable'),
+          Center(
+            child: Text('HomeScreen'),
           ),
           ElevatedButton(
               onPressed: () {

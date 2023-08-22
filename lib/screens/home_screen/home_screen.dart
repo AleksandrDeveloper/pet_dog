@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 final user = User(name: 'Alex Frost', age: 33);
                 context.go('/auth', extra: user);
               },
-              child: Text('Go To')),
+              child: Text('Поехали')),
         ],
       ),
     );

@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pet Dog'),
+        title: const Text('Домашняя собака'),
         backgroundColor: Theme.of(context).primaryColor.withOpacity(0.2),
       ),
       body: Column(

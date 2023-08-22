@@ -12,8 +12,10 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
+import '../../domain/export.dart' as _i6;
 import '../../domain/repository.dart' as _i4;
 import '../../domain/service.dart' as _i3;
+import '../../screens/home_screen/cubit/home_screen_cubit.dart' as _i5;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -29,6 +31,8 @@ extension GetItInjectableX on _i1.GetIt {
     gh.factory<_i3.Service>(() => _i3.Service());
     gh.factory<_i4.Repository>(
         () => _i4.Repository(service: gh<_i3.Service>()));
+    gh.factory<_i5.HomeScreenCubit>(
+        () => _i5.HomeScreenCubit(repository: gh<_i6.Repository>()));
     return this;
   }
 }

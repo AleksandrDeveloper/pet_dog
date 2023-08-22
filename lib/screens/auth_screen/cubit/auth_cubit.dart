@@ -10,8 +10,12 @@ class AuthCubit extends Cubit<AuthState> {
   AuthCubit({required this.repository}) : super(const AuthState());
   final Repository repository;
 
-  ({int age, String name}) testVoid() {
-    final response = repository.fetchUser();
-    return (age: response.age, name: response.name);
+  Future<void> goRegistration({
+    required String login,
+    required String password,
+  }) async {
+    final response =
+        await repository.goRegistration(login: login, password: password);
+    print('massege = ${response}');
   }
 }

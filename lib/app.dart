@@ -6,6 +6,8 @@ import 'package:testtest/ui_kit/theme.dart';
 import 'package:testtest/utils/di/getit_init.dart';
 import 'package:testtest/utils/route/route.dart';
 
+import 'screens/home_screen/cubit/home_screen_cubit.dart';
+
 class App extends StatefulWidget {
   const App({super.key});
 
@@ -18,6 +20,10 @@ class _AppState extends State<App> {
     BlocProvider<AuthCubit>(
       create: (BuildContext context) =>
           AuthCubit(repository: getIt<Repository>()),
+    ),
+    BlocProvider<HomeScreenCubit>(
+      create: (BuildContext context) =>
+          HomeScreenCubit(repository: getIt<Repository>()),
     ),
   ];
 

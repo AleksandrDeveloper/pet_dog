@@ -2,7 +2,11 @@ import 'package:injectable/injectable.dart';
 import 'package:testtest/domain/service.dart';
 
 abstract class BaseRepository {
-  void fetchUser() {}
+  Future<String> fetchUser();
+  Future<String> goRegistration({
+    required String login,
+    required String password,
+  });
 }
 
 @injectable
@@ -12,5 +16,8 @@ class Repository implements BaseRepository {
   final Service service;
 
   @override
-  ({String name, int age}) fetchUser() => service.fetchUser();
+  Future<String> fetchUser() => service.fetchUser();
+
+  @override
+  Future<String> goRegistration({required String login, required String password}) => service.goRegistration(login: login, password: password);
 }
